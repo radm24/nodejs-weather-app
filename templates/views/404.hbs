@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404</title>
+        <link rel="stylesheet" href="/assets/css/style.css"/>
+    </head>
+    <body>
+        {{> header}}
+        <main>
+            <p>{{errorMessage}}</p>
+        </main>
+        {{> footer}}
+        
+        {{!-- {{#if errorMessage}}
+            {{> header}}
+            <main>
+                <p>{{errorMessage}}</p>
+            </main>
+            {{> footer}}
+        {{else}}
+            <main id="error_404">
+                {{> nav}}
+            </main>
+        {{/if}} --}}
+    </body>
+</html>
