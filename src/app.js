@@ -38,7 +38,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'By this web application you can get an actual weather forecast for any location.\nFor that you need to enter a name of an interested place on the \'Weather\' page.',
+        helpText: 'By this web application you can get an actual weather forecast for any location.\nFor that you need to enter a name of an interested location on the \'Weather\' page.',
         title: 'Help',
         name: 'Radik Musin'
     });
