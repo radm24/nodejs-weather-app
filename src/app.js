@@ -17,6 +17,13 @@ const partialsPath = path.join(__dirname, '../templates/partials');
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
+
+hbs.registerHelper('link', function(text, url) {
+    const handlebars = hbs.handlebars;
+    const escapedText = handlebars.escapeExpression(text);
+    const escapedUrl = handlebars.escapeExpression(url);
+    return new handlebars.SafeString(`<a href="${escapedUrl}">${escapedText}</a>`);
+})
 hbs.registerPartials(partialsPath);
 
 // Setup static directory to server
@@ -38,7 +45,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'By this web application you can get an actual weather forecast for any location.\nFor that you need to enter a name of an interested location on the \'Weather\' page.',
+        helpText: 'By this web application you can get an actual weather forecast for any location.\nFor that you need to enter a name of an interested location on',
         title: 'Help',
         name: 'Radik Musin'
     });

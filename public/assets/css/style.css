@@ -52,6 +52,11 @@ img.about {
     line-height: 1.4;
 }
 
+.help a {
+    color: #888888;
+    text-decoration: none;
+}
+
 #weatherInput {
     border: 1px solid #cccccc;
     padding: 8px;
